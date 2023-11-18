@@ -1,0 +1,33 @@
+body{
+    text-align: center;
+    background-color: rgb(233, 215, 207);
+    color: rgb(0, 255, 110);
+}
+
+
+
+h1{
+    font-size: 20px;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+p{
+    font-size: 30px;
+font-family: 'Oswald', sans-serif;
+}
+
+a{
+    font-family: 'Fira Sans', sans-serif;
+    text-decoration: none;
+    color: rgb(167, 1, 78);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#idAttribute{
+    font-weight: 100;
+    font-size: 100px;
+    color: rgb(226, 196, 255);
+}
