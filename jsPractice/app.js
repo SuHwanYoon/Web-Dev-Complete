@@ -22,6 +22,22 @@ function calMyAge() {
 }
 
 yoonage = calMyAge();
-alert("Yoon's age:"+ yoonage);
+console.log("Yoon's age:"+ yoonage);
 
+
+let person = {
+    name: 'yoon',
+    greet(){
+        console.log('hello');
+    }
+};
+
+person.greet();
+
+console.log('Yoon'+' '+'SuHwan')
+
+let userName = 'steve';
+console.log(userName.length);
+console.log(userName.toUpperCase());
+console.log(hobbies.length);
 
