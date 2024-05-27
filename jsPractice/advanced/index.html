@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced JS</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="demo.js" defer></script>
   </head>
-  <script src="app.js" defer></script>
   <body>
-
-    <p>Click me!</p>
-    <input type="text">
+    <form>
+        <div class="control">
+            <label for="input-text">Product Name :</label>
+            <input type="text" id="input-text" name="input-text" maxlength="60">
+            <span id="charcount">
+                <!-- 남은 글자수를 나타낼 span -->
+                <span id="remaining-chars">60</span>/60
+            </span>
+        </div>
+        <button>Submit</button>
+    </form>
   </body>
 </html>
