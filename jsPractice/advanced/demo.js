@@ -17,6 +17,8 @@ function updateRemainingCharaters(event) {
     const remainnigCharacters = maxAllowedChars - enteredTextLength;
 
     //span엘리먼트 값에 계산값을 넣어준다
+    //const값이지만 span엘리먼트의 속성에 변화를 주는 것이기 때문에 
+    //오류가아니다
     remainingCharsElement.textContent = remainnigCharacters;
 }
 
