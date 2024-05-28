@@ -24,4 +24,3 @@ function updateRemainingCharaters(event) {
 
 //input에 텍스트가 입력될때마다 실행될 이벤트
 inputTextElement.addEventListener('input',updateRemainingCharaters);
-
