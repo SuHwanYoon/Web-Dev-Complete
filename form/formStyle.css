@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(107, 97, 97);
+    /* input 요소 모든방향에 여백주기 */
+    /* margin: 8rem; */
+    /* Roboto가 적용이 안될시에는 sans-serif로  */
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    width: 30rem;
+    margin: 3rem auto;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+input {
+    /* 부모요소(여기서는 from)의 30rem 넓이에 맞춰 100%를 설정  */
+    width: 100%;
+    /* 블록레벨로 설정 */
+    display: block;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <!-- 구글폰트 삽입 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="formStyle.css" />
+  </head>
+  <body>
+    <form action="/form/index.html" method="GET">
+      <!-- for속성지정으로 인해 라벨을클릭하면 input으로 포커싱 -->
+      <label for="username">Your name</label>
+      <input type="text" name="user-name" id="username" />
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
