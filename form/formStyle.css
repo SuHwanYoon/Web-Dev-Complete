@@ -1,8 +1,9 @@
 body{
-    background-color: rgb(107, 97, 97);
+    background-color: rgb(32, 30, 30);
     /* input 요소 모든방향에 여백주기 */
     /* margin: 8rem; */
     /* Roboto가 적용이 안될시에는 sans-serif로  */
+    /* body요소내의 모든 텍스트 요소는 font-family: 'Roboto', sans-serif;를 상속받는다 */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -14,15 +15,63 @@ form {
     border-radius: 6px;
 }
 
-input {
+label {
+    margin-bottom: 0.5rem;
+    /* label은 인라인요소이기 때문에 margin-bottom 적용을 위해 block요소로 변환 */
+    display: block;
+}
+
+/* 동일한 스타일링 부여 */
+input,textarea,select {
     /* 부모요소(여기서는 from)의 30rem 넓이에 맞춰 100%를 설정  */
     width: 100%;
     /* 블록레벨로 설정 */
     display: block;
     margin-bottom: 1rem;
     box-sizing: border-box;
+    /* 부모요소(여기서는 body)의 font-family 를 상속받음 만약 font-family이외의 요소가 있다면그것들도 포함해서 상속받음  */
+    font: inherit;
+    border: 1px solid rgb(184, 184, 184);
+    padding: 0.25rem;
+    /* input text box안에 들어가는 텍스트의 컬러 */
+    color: rgb(61, 58, 58);
+}
+
+/* input 요소를 포커싱 했을때 적용될 css */
+/* 동일한 스타일링 부여 */
+input:focus,textarea:focus {
+    background-color: rgb(219, 190, 253);
+    color: rgb(0, 0, 0);
+    border-color:  rgb(128, 161, 35);
 }
 
 button {
     display: block;
+    /* 부모요소(여기서는 body)의 font-family 를 상속받음 만약 font-family이외의 요소가 있다면그것들도 포함해서 상속받음  */
+    font: inherit;
+    background-color: rgb(32, 5, 63);
+    color: white;
+    border: 1px solid rgb(32, 5, 63);
+    /* 상하,좌우 패딩설정 */
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    /* 버트위에 커서가 올라가면 손모양으로 변화 */
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(52, 14, 95);
+    border-color: rgb(52, 14, 95);
+}
+
+.form-control-inline {
+    display: flex;
+}
+
+
+/* .form-control-inline요소의 input요소(라디오버튼)를 지정 */
+.form-control-inline input {
+    width: auto;
+    /* 라디오버튼에 오른쪽 마진을 줘서 label을 밀어냄 label이 움직이는 것이 아님 */
+    margin-right: 1rem;
 }
