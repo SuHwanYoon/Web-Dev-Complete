@@ -7,6 +7,19 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+    text-align: center;
+    color: white;
+}
+
+ul {
+    /* 글머리기호삭제 */
+    list-style: none;
+    /* 들여쓰기 지우기 */
+    margin: 0;
+    padding: 0;
+}
+
 form {
     width: 30rem;
     margin: 3rem auto;
@@ -37,6 +50,11 @@ input,textarea,select {
     color: rgb(61, 58, 58);
 }
 
+textarea {
+    /* 크로기조절 기능 비활성화 */
+    resize: none;
+}
+
 /* input 요소를 포커싱 했을때 적용될 css */
 /* 동일한 스타일링 부여 */
 input:focus,textarea:focus {
@@ -46,7 +64,7 @@ input:focus,textarea:focus {
 }
 
 button {
-    display: block;
+    /* display: block; */
     /* 부모요소(여기서는 body)의 font-family 를 상속받음 만약 font-family이외의 요소가 있다면그것들도 포함해서 상속받음  */
     font: inherit;
     background-color: rgb(32, 5, 63);
@@ -57,6 +75,19 @@ button {
     border-radius: 4px;
     /* 버트위에 커서가 올라가면 손모양으로 변화 */
     cursor: pointer;
+}
+
+#form-button {
+    text-align: right;
+}
+
+.btn-reset{
+    background-color: transparent;
+    color: rgb(51, 67, 100);
+}
+
+.btn-reset:hover{
+    background-color: rgb(208, 215, 230);
 }
 
 button:hover{

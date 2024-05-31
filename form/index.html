@@ -14,71 +14,133 @@
     <link rel="stylesheet" href="formStyle.css" />
   </head>
   <body>
-    <form action="/form/index.html" method="GET">
-      <!-- for속성에 input의 id 지정으로 인해 라벨을클릭하면 input으로 포커싱 -->
-      <label for="username">Your name</label>
-      <input type="text" name="user-name" id="username" />
-      <!-- 텍스트에리어 -->
-      <label for="user-introduce">Introduce Yourself!</label>
-      <textarea name="userintroduce" id="user-introduce"></textarea>
+    <!-- 헤더요소 -->
+    <header>
+      <h1>Demo Form</h1>
+    </header>
+    <!-- 메인요소 -->
+    <main>
+      <form action="/form/index.html" method="GET">
 
-      <label for="useremail">Your email Adress</label>
-      <input type="email" name="user-email" id="useremail" />
-      <label for="userage">Your age</label>
-      <!-- step속성은 한번에 변경할 숫자단위를 지정가능 -->
-      <input type="number" step="1" name="user-age" id="userage" />
-      <label for="userpassword">Your password</label>
-      <input type="password" name="user-password" id="userpassword" />
-      <label for="userbirthday">Your birthday</label>
-      <input type="date" name="user-birthday" id="userbirthday" />
-      <hr />
-      <!-- 드랍다운 -->
-      <label for="favorite-color">Your Favorite Color</label>
-      <select name="favorite-color" id="favorite-color">
-        <option value="blue">My Favore Color is Blue!</option>
-        <option value="black">My Favore Color is Black!</option>
-        <option value="white">My Favore Color is White!</option>
-      </select>
+        <!-- 개인정보입력섹션 -->
+        <section>
+          <h2>Your Person Details</h2>
+          <ul>
+            <li>
+              <!-- for속성에 input의 id 지정으로 인해 라벨을클릭하면 input으로 포커싱 -->
+              <label for="username">Your name</label>
+              <input type="text" name="user-name" id="username" required placeholder="write your name"/>
+            </li>
+            <li>
+              <label for="useremail">Your email Adress</label>
+              <input type="email" name="user-email" id="useremail" required/>
+            </li>
+            <li>
+              <label for="userpassword">Your password</label>
+              <input type="password" name="user-password" id="userpassword" required minlength="7"/>
+            </li>
+          </ul>
+        </section>
 
-      <h2>Account Authentication</h2>
-      <!-- 라디오 버튼의 선택값을 하나만 선택가능하게 하고 
-        서버에서 하나의 값유형으로 식별 하기위해서 name을 
-        모두 같은값으로 설정 -->
-      <!-- 폼 제출시 name속성=value속성값 형식으로 쿼리스트링이 전달된다 -->
-      <!-- 레이아웃조정을 위해 라디오버튼 각각을 div로 묶고 같은 class 이름을 할당 -->
-      <div class="form-control-inline">
-        <input type="radio" name="verify" id="verify-sms" value="sms" />
-        <label for="verify-sms">SMS</label>
-      </div>
-      <div class="form-control-inline">
-        <input type="radio" name="verify" id="verify-call" value="call" />
-        <label for="verify-call">Phone Call</label>
-      </div>
-      <div class="form-control-inline">
-        <input type="radio" name="verify" id="verify-email" value="email" />
-        <label for="verify-email">Email</label>
-      </div>
-      <!-- 체크박스가 둘중 하나의 값을 전송하는 경우 ex)예/아니오 , 필수사항-->
-      <div class="form-control-inline">
-        <input type="checkbox" name="terms" id="agree-terms" />
-        <label for="agree-terms">약관에 동의 하십니까?</label>
-      </div>
-      <!-- 체크박스가 name으로 그룹화된 데이터를 전송하는 경우 ex)선택사항-->
-      <!-- value 값을 설정해준다 -->
-      <div class="form-control-inline">
-        <input type="checkbox" name="receive" id="receive-sms" value="sms" />
-        <label for="receive-sms">Agree receive sms</label>
-      </div>
-      <div class="form-control-inline">
-        <input
-          type="checkbox"
-          name="receive"
-          id="receive-email"
-          value="email"
-        />
-        <label for="receive-email">Agree receive-email</label>
-      </div>
-      <button>Submit</button>
-    </form>
+        <!-- 부가정보 입력섹션 -->
+        <section>
+          <h2>More Details</h2>
+          <ul>
+            <li>
+              <label for="userage">Your age</label>
+              <!-- step속성은 한번에 변경할 숫자단위를 지정가능 -->
+              <input type="number" step="1" name="user-age" id="userage" min="18" max="100"/>
+            </li>
+            <li>
+              <label for="userbirthday">Your birthday</label>
+              <input type="date" name="user-birthday" id="userbirthday" required min="1921-01-01" max="2004-01-01"/>
+            </li>
+            <li>
+              <!-- 드랍다운 -->
+              <label for="favorite-color">Your Favorite Color</label>
+              <select name="favorite-color" id="favorite-color">
+                <option value="blue">My Favore Color is Blue!</option>
+                <option value="black">My Favore Color is Black!</option>
+                <option value="white">My Favore Color is White!</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <!-- 텍스트에리어 -->
+          <label for="user-introduce">Introduce Yourself!</label>
+          <textarea name="userintroduce" id="user-introduce" rows="8"></textarea>
+        </section>
+
+        <!-- 인증수단선택섹션 -->
+        <section>
+          <ul>
+            <h2>Account Authentication</h2>
+            <!-- 라디오 버튼의 선택값을 하나만 선택가능하게 하고 
+              서버에서 하나의 값유형으로 식별 하기위해서 name을 
+              모두 같은값으로 설정 -->
+            <!-- 폼 제출시 name속성=value속성값 형식으로 쿼리스트링이 전달된다 -->
+            <!-- 레이아웃조정을 위해 라디오버튼 각각을 div로 묶고 같은 class 이름을 할당 -->
+            <li class="form-control-inline">
+              <input type="radio" name="verify" id="verify-sms" value="sms" required/>
+              <label for="verify-sms">SMS</label>
+            </li>
+            <li class="form-control-inline">
+              <input type="radio" name="verify" id="verify-call" value="call" required/>
+              <label for="verify-call">Phone Call</label>
+            </li>
+            <li class="form-control-inline">
+              <input
+                type="radio"
+                name="verify"
+                id="verify-email"
+                value="email"
+                required
+              />
+              <label for="verify-email">Email</label>
+            </li>
+          </ul>
+        </section>
+        <!-- 수신동의섹션 -->
+        <section>
+          <h2>How should we contact you?</h2>
+          <!-- 체크박스가 name으로 그룹화된 데이터를 전송하는 경우 ex)선택사항-->
+          <!-- value 값을 설정해준다 -->
+          <li class="form-control-inline">
+            <input
+              type="checkbox"
+              name="receive"
+              id="receive-sms"
+              value="sms"
+            />
+            <label for="receive-sms">Agree receive sms</label>
+          </li>
+          <li class="form-control-inline">
+            <input
+              type="checkbox"
+              name="receive"
+              id="receive-email"
+              value="email"
+            />
+            <label for="receive-email">Agree receive-email</label>
+          </li>
+        </section>
+
+        <section>
+          <hr />
+          <!-- 체크박스가 둘중 하나의 값을 전송하는 경우 ex)예/아니오 , 필수사항-->
+          <div class="form-control-inline">
+            <input type="checkbox" name="terms" id="agree-terms" />
+            <label for="agree-terms">약관에 동의 하십니까?</label>
+          </div>
+        </section>
+        <section id="form-button">
+          <button type="reset" class="btn-reset">Clear</button>
+          <button>Submit</button>
+        </section>
+
+      </form>
+    </main>
   </body>
 </html>
