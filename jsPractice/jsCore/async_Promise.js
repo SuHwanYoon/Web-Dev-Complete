@@ -1,4 +1,5 @@
 const fetchData = (callback) => {
+    //1.5초후 실행되는 비동기코드
     setTimeout(() => {
         callback('Done Callback!')
     }, 1500)
