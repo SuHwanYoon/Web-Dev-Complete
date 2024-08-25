@@ -31,7 +31,7 @@ a{
     margin: 0;
 }
 
-
+/* 마우스 커서관련 */
 a:hover{
     background-color: rgb(180, 12, 90);
     text-decoration: none;
@@ -60,7 +60,7 @@ h2{
     color: rgb(78 , 13, 5);
     font-family: 'Oswald', sans-serif;
 }
-
+/* 결합자 사용 */
 main p{
     margin: 12px;
     color: rgb(71, 29, 22);

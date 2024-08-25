@@ -1,31 +1,33 @@
-body{
-    text-align: center;
-    background-color: rgb(233, 215, 207);
-    color: rgb(83, 75, 75);
+/* 모든 html페이지에 적용할 공통 스타일 */
+body {
+  text-align: center;
+  background-color: rgb(233, 215, 207);
+  color: rgb(83, 75, 75);
+  margin: 50px;
 }
 
-
-
-h1{
-    font-family: 'Fira Sans', sans-serif;
+h1 {
+  font-family: "Fira Sans", sans-serif;
 }
 
-p{
-font-family: 'Oswald', sans-serif;
+p {
+  font-family: "Oswald", sans-serif;
+  /* 기본 폰트사이즈 대신 구체적 사이즈 지정 */
+  font-size: 24px;
 }
 
-a{
-    font-family: 'Fira Sans', sans-serif;
-    text-decoration: none;
-    color: rgb(167, 1, 78);
+a {
+  font-family: "Fira Sans", sans-serif;
+  text-decoration: none;
+  color: rgb(167, 1, 78);
 }
 
-a:hover{
-    text-decoration: underline;
+a:hover {
+  text-decoration: underline;
 }
 
-#idAttribute{
-    font-weight: 100;
-    font-size: 100px;
-    color: rgb(226, 196, 255);
+#idAttribute {
+  font-weight: 100;
+  font-size: 100px;
+  color: rgb(226, 196, 255);
 }
