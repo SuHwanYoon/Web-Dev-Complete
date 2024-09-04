@@ -11,34 +11,40 @@
     <link rel="stylesheet" href="style/shared.css" />
     <!-- index.html전용 css 파일 적용 -->
     <link rel="stylesheet" href="style/daily-challenge.css" />
+    <!-- 네비게이션바 css -->
+    <link rel="stylesheet" href="./nav-bar/nav-bar-style.css" />
+    <!-- 네비게이션바 로드 js파일 -->
+    <script src="./nav-bar/nav-bar.js" defer></script>
     <title>메인 페이지</title>
   </head>
   <body>
-    <!-- div대신 의미론적 태그 main사용 -->
-    <main>
-      <!-- 이미지가 안나올 경우의 대체 텍스트 alt -->
-      <img src="images/challenges-trophy.jpg" alt="A trophy" />
-      <!--특정 텍스트 선택위해 span요소 사용-->
-      <h1>Web-dev-Complete</h1>
-      <p id="todays-challenge">Welcome to Yoon's ForntEnd Pages!</p>
-    </main>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-page="index">Home</a></li>
+          <li><a href="full-week.html" data-page="full-week">Full Week</a></li>
+          <li>
+            <a href="HTML-CSS-Summary/summary-index.html" data-page="summary"
+            >HTML/CSS Summary</a
+            >
+          </li>
+          <li><a href="form/form-index.html" data-page="form">Form</a></li>
+          <li>
+            <a href="js-event/event-index.html" data-page="event">JS Event</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="content">
+      <main role="main">
+        <img src="images/challenges-trophy.jpg" alt="A trophy" />
+        <h1>Web-dev-Complete</h1>
+        <p>Welcome to Yoon's Frontend Pages!</p>
+      </main>
+    </div>
     <footer>
-          <p>
-            Move to
-            <a href="full-week.html">Full Week HTML Page</a>
-          </p>
-          <p>
-            Move to
-            <a href="HTML-CSS-Summary\index.html">Summary Page</a>
-          </p>
-          <p>
-            Move to
-            <a href="form\form-index.html">Form Page</a>
-          </p>
-          <p>
-            Move to
-            <a href="js-event/event-index.html">JS Event Page</a>
-          </p>
+      <p>Copyright © 2024 Yoon</p>
     </footer>
+    
   </body>
 </html>
