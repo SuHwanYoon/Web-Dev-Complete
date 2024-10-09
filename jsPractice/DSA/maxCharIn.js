@@ -6,6 +6,7 @@ function maxChars(str) {
     //charMap 객체에 key,value를 설정하는과정
     for (let char  of str) {
         if (charMap[char]) {
+            //charMap의 value를 ++
             charMap[char]++
         }else{
             charMap[char] = 1
